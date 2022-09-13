@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SideBar from '../components/SideBar';
-import { protocol, endpoint } from '../shared/sharedData';
+import { protocol, url } from '../shared/sharedData';
 import ProjectsContainer from '../components/ProjectsContainer';
 import projectsIcon from '../assets/icons/icon-web-development.png';
 import logo from '../assets/images/logo.png';
@@ -19,7 +19,7 @@ export default function Home({ isLoggedIn }) {
   const fetchPosts = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`${protocol}://${endpoint}/posts`);
+      const response = await fetch(`${protocol}://${url}/posts`);
       let data = await response.json();
       setPosts(data);
       setLoading(false);

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { endpoint, protocol } from '../shared/sharedData';
+import { url, protocol } from '../shared/sharedData';
 import '../styles/loginStyle.css';
 
 export default function Login() {
@@ -26,7 +26,7 @@ export default function Login() {
     };
     setLoading(true);
     try {
-      await fetch(`${protocol}://${endpoint}/users/login`, requestOptions)
+      await fetch(`${protocol}://${url}/users/login`, requestOptions)
         .then((response) => response.json())
         .then((response) => {
           if (response.success) {
