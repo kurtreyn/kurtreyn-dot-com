@@ -6,9 +6,9 @@ export default function SideBar({ isLoggedIn }) {
   return (
     <div className="sidebar-container">
       <div className="sidebar-content-wrapper">
-        {/* <Link to="/algorithms" className="sidebar-text">
+        <Link to="/algorithms" className="sidebar-text">
           Algorithms
-        </Link> */}
+        </Link>
         <Link to="/users/login" className="sidebar-text">
           Login
         </Link>
