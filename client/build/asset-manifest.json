@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.2f41fdd4.css",
-    "main.js": "/static/js/main.ff6de643.js",
+    "main.js": "/static/js/main.02ce361c.js",
     "static/media/leo-designs-960x540.png": "/static/media/leo-designs-960x540.067915ce30509e8081ec.png",
     "static/media/storyteller-960x540.png": "/static/media/storyteller-960x540.260949e92f5221e7e90c.png",
     "static/media/knownostalgia-960x540.png": "/static/media/knownostalgia-960x540.91e626fa1885482bee17.png",
@@ -16,10 +16,10 @@
     "index.html": "/index.html",
     "static/media/close-icon.svg": "/static/media/close-icon.3a4f340b9f4b340399e2b64a84033251.svg",
     "main.2f41fdd4.css.map": "/static/css/main.2f41fdd4.css.map",
-    "main.ff6de643.js.map": "/static/js/main.ff6de643.js.map"
+    "main.02ce361c.js.map": "/static/js/main.02ce361c.js.map"
   },
   "entrypoints": [
     "static/css/main.2f41fdd4.css",
-    "static/js/main.ff6de643.js"
+    "static/js/main.02ce361c.js"
   ]
 }
