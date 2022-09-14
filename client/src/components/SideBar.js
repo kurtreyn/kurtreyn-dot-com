@@ -7,7 +7,7 @@ export default function SideBar({ isLoggedIn }) {
     <div className="sidebar-container">
       <div className="sidebar-content-wrapper">
         <Link to="/algorithms" className="sidebar-text">
-          Algorithms
+          Algorithm Simulator
         </Link>
         <Link to="/users/login" className="sidebar-text">
           Login
