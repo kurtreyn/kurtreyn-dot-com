@@ -6,6 +6,8 @@ import projectsIcon from '../assets/icons/icon-web-development.png';
 import logo from '../assets/images/logo.png';
 import githubIcon from '../assets/icons/icon-github.png';
 import linkedinIcon from '../assets/icons/icon-linkedin.png';
+import chevronUp from '../assets/icons/chevron-up.svg';
+import chevronDown from '../assets/icons/chevron-down.svg';
 import '../styles/homeStyle.css';
 
 export default function Home({ isLoggedIn }) {
@@ -116,7 +118,13 @@ export default function Home({ isLoggedIn }) {
             <div
               className="sidebar-block"
               onClick={() => setShoSideBar(!showSideBar)}
-            ></div>
+            >
+              <img
+                src={!showSideBar ? chevronDown : chevronUp}
+                alt="down arrow"
+                className="toggle-icon"
+              />
+            </div>
             {showSideBar && <SideBar isLoggedIn={isLoggedIn} />}
           </div>
         </div>

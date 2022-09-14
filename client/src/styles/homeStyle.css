@@ -52,6 +52,7 @@
   justify-content: flex-start;
   align-items: flex-end;
   width: 25%;
+  margin-right: 80px;
 }
 
 .home-icon {
@@ -152,18 +153,27 @@
 
 .sidebar-section {
   display: flex;
+  position: relative;
   margin-top: 80px;
 }
 
 .sidebar-block {
-  width: 15px;
-  height: 120px;
+  width: 150px;
+  height: 2px;
   background-color: var(--white);
   cursor: pointer;
 }
 
-.sidebar-block:hover {
-  transform: scale(1.1);
+.toggle-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 130px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.toggle-icon:hover {
+  transform: scale(1.05);
 }
 
 /* ---------- MOBILE SECTION ----------- */
