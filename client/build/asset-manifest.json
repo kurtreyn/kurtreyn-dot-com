@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.1d83c219.css",
+    "main.css": "/static/css/main.61278a9b.css",
     "main.js": "/static/js/main.088f3f58.js",
     "static/media/leo-designs-960x540.png": "/static/media/leo-designs-960x540.067915ce30509e8081ec.png",
     "static/media/storyteller-960x540.png": "/static/media/storyteller-960x540.260949e92f5221e7e90c.png",
@@ -17,11 +17,11 @@
     "static/media/close-icon.svg": "/static/media/close-icon.3a4f340b9f4b340399e2b64a84033251.svg",
     "static/media/chevron-up.svg": "/static/media/chevron-up.aa05af979ac1f4b2dbdd842feb4b905d.svg",
     "static/media/chevron-down.svg": "/static/media/chevron-down.fb607221c3bfa5b5b02c92c2e1128466.svg",
-    "main.1d83c219.css.map": "/static/css/main.1d83c219.css.map",
+    "main.61278a9b.css.map": "/static/css/main.61278a9b.css.map",
     "main.088f3f58.js.map": "/static/js/main.088f3f58.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d83c219.css",
+    "static/css/main.61278a9b.css",
     "static/js/main.088f3f58.js"
   ]
 }
