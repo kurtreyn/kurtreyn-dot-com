@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rubik+Dirt&display=swap');
+
 .css-demo-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: white;
-  position: relative;
-  outline: solid 1px red;
 }
 
 .css-demo-container::-webkit-scrollbar {
@@ -16,11 +17,39 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  background: #2e64aa;
+  border-radius: 0% 100% 100% 0% / 0% 0% 100% 0%;
 }
 
 .css-header-text {
-  color: black;
-  font-weight: 600;
+  font-family: 'Rubik Dirt', cursive;
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  margin-left: 1rem;
+}
+
+.css-demo-body-text {
+  font-family: 'Poppins', sans-serif;
+}
+
+.css-left-body-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-left: 1rem;
+  width: 100%;
+}
+
+.css-demo-body-image {
+  width: 50%;
+  border-radius: 20px;
+  box-shadow: 5px 10px #adadadf9;
+}
+
+.css-demo-section-title {
+  font-family: 'Rubik Dirt', cursive;
+  font-size: 3rem;
 }
 
 .css-demo-icon {
@@ -36,7 +65,7 @@
 
 .css-demo-body {
   display: flex;
-  max-height: 800px;
+  max-height: 650px;
   background-color: white;
 }
 
@@ -45,17 +74,28 @@
   flex-direction: column;
   width: 50%;
 }
+
 .css-demo-body-right-side {
   display: flex;
   flex-direction: column;
   width: 50%;
 }
 
-.css-demo-gallery-container {
+.css-demo-text-container-one {
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+}
+
+.css-demo-gallery-container-outer {
+  display: flex;
+  max-height: 600px;
+}
+
+.css-demo-gallery-container-inner {
   columns: 3;
   margin: 10px;
   gap: 20px;
-  padding: 10px;
+  padding: 15px;
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -75,6 +115,8 @@
 
 .css-demo-footer {
   display: flex;
+  position: absolute;
+  bottom: 0;
   background-color: rgb(32, 30, 30);
 }
 
@@ -84,4 +126,128 @@
 
 /* ---------- MOBILE SECTION ----------- */
 @media only screen and (max-width: 600px) {
+  .css-demo-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    outline: solid 1px red;
+  }
+
+  .css-demo-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .css-demo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: #2e64aa;
+    border-radius: 0% 100% 100% 0% / 0% 0% 100% 0%;
+  }
+
+  .css-header-text {
+    font-family: 'Rubik Dirt', cursive;
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+    margin-left: 1rem;
+  }
+
+  .css-demo-body-text {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .css-left-body-image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-left: 1rem;
+    width: 100%;
+  }
+
+  .css-demo-body-image {
+    width: 50%;
+    border-radius: 20px;
+    box-shadow: 5px 10px #adadadf9;
+  }
+
+  .css-demo-section-title {
+    font-family: 'Rubik Dirt', cursive;
+    font-size: 3rem;
+  }
+
+  .css-demo-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .css-demo-icon:hover {
+    transform: scale(1.1);
+  }
+
+  .css-demo-body {
+    display: flex;
+    max-height: 650px;
+    background-color: white;
+  }
+
+  .css-demo-body-left-side {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .css-demo-body-right-side {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .css-demo-text-container-one {
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+  }
+
+  .css-demo-gallery-container-outer {
+    display: flex;
+    max-height: 600px;
+  }
+
+  .css-demo-gallery-container-inner {
+    columns: 3;
+    margin: 10px;
+    gap: 20px;
+    padding: 15px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    border: solid 1px black;
+    border-radius: 20px;
+  }
+
+  .css-demo-gallery-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .css-demo-img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  .css-demo-footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(32, 30, 30);
+  }
+
+  .css-demo-footer-img {
+    width: 10%;
+  }
 }
