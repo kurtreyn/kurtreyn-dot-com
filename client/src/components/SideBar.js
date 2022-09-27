@@ -12,6 +12,9 @@ export default function SideBar({ isLoggedIn, showSideBar }) {
       }
     >
       <div className="sidebar-content-wrapper">
+        <Link to="/demos" className="sidebar-text">
+          Demos
+        </Link>
         <Link to="/algorithms" className="sidebar-text">
           Algorithm Simulator
         </Link>
