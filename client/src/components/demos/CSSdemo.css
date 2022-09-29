@@ -114,7 +114,7 @@
   margin-bottom: 20px;
 }
 
-.css-demo-hero-container {
+.css-demo-splash-page-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -128,25 +128,52 @@
   /* outline: solid 1px green; */
 }
 
-.css-demo-hero-inner {
+.css-demo-splash-page-inner {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   width: 100%;
 }
 
-.css-demo-hero-image {
+.css-demo-splash-page-image {
   width: 100%;
 }
 
-.css-demo-hero-text {
-  /* font-family: 'Montserrat', sans-serif; */
+.css-demo-splash-page-text {
   font-family: 'Oswald', sans-serif;
   font-weight: 200;
   color: white;
   font-size: 5rem;
-  position: absolute;
+}
+
+.css-demo-splash-page-form {
+  background-color: white;
+  display: flex;
+  padding: 2px;
+  width: 400px;
+  height: 40px;
+  border-radius: 20px;
+  padding: 7px 8px;
+  border: solid 1px transparent;
+}
+
+.css-demo-splash-page-search-input {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  background-color: white;
+  width: 380px;
+  /* border-radius: 20px; */
+  padding: 7px 8px;
+  border: solid 1px transparent;
+  outline: none;
+  /* background: url('../../assets/icons/search.svg') no-repeat 13px center; */
+}
+
+.css-demo-splash-page-search-icon {
+  width: 50px;
+  cursor: pointer;
 }
 
 .css-demo-footer {

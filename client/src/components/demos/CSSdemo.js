@@ -28,7 +28,7 @@ import {
   newZealand,
   miamiPanrama,
 } from './externalImages';
-
+import searchIcon from '../../assets/icons/search.svg';
 import closeIcon from '../../assets/icons/close-icon.svg';
 import './CSSdemo.css';
 
@@ -62,11 +62,23 @@ export default function CSSdemo({ setDemoActive, logo }) {
     </div>
   );
 
-  const CssDemoHero = () => (
-    <div className="css-demo-hero-container">
-      <div className="css-demo-hero-inner">
-        {/* <img src={miamiPanrama} alt="miami" className="css-demo-hero-image" /> */}
-        <h2 className="css-demo-hero-text">CSS Travel Demo</h2>
+  const CssDemoSplashPage = () => (
+    <div className="css-demo-splash-page-container">
+      <div className="css-demo-splash-page-inner">
+        {/* <img src={miamiPanrama} alt="miami" className="css-demo-splash-page-image" /> */}
+        <h2 className="css-demo-splash-page-text">CSS Travel Site Demo</h2>
+        <form className="css-demo-splash-page-form">
+          <input
+            type="search"
+            placeholder="Where do you want to go today?"
+            className="css-demo-splash-page-search-input"
+          />
+          <img
+            src={searchIcon}
+            alt="search"
+            className="css-demo-splash-page-search-icon"
+          />
+        </form>
       </div>
     </div>
   );
@@ -120,9 +132,9 @@ export default function CSSdemo({ setDemoActive, logo }) {
 
   return (
     <div className="css-demo-container">
-      <CssDemoHero />
+      <CssDemoSplashPage />
       {/* <CssDemoHeader /> */}
-      {/* <CssDemoBody /> */}
+      <CssDemoBody />
       {/* <CssDemoFooter /> */}
     </div>
   );
