@@ -3,8 +3,7 @@
 .css-demo-container {
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   background-color: white;
 }
 
@@ -12,45 +11,82 @@
   display: none;
 }
 
+/* HEADER */
 .css-demo-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background: #2e64aa;
-  border-radius: 0% 100% 100% 0% / 0% 0% 100% 0%;
+  height: 300px;
+  position: relative;
+  background-image: url('https://cdn.pixabay.com/photo/2017/03/05/00/34/panorama-2117310_1280.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-left-radius: 100% 80%;
+  border-bottom-right-radius: 100% 80%;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
 }
 
 .css-header-text {
-  font-family: 'Rubik Dirt', cursive;
-  font-size: 4rem;
-  color: #fff;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: black;
   margin-left: 1rem;
+}
+
+/* BODY */
+.css-demo-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.css-demo-body-row {
+  display: flex;
+  width: 100%;
+}
+
+.css-demo-body-column {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 1%;
+}
+
+.image-col {
+  justify-content: center;
+  align-items: center;
+}
+
+.text-col {
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 5%;
+  /* outline: solid 1px red; */
+}
+
+.css-demo-body-text-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
 }
 
 .css-demo-body-text {
   font-family: 'Montserrat', sans-serif;
-  /* font-family: 'Oswald', sans-serif; */
+  font-weight: 200;
+  line-height: 1.2rem;
+  font-size: 1rem;
 }
 
-.css-left-body-image-wrapper {
+.css-body-image-wrapper {
   display: flex;
-  justify-content: center;
-  margin-left: 1rem;
-  width: 100%;
+  width: 70%;
 }
 
 .css-demo-body-image {
-  width: 50%;
+  width: 100%;
   border-radius: 20px;
-  box-shadow: 5px 10px #adadadf9;
-}
-
-.css-demo-section-title {
-  font-family: 'Rubik Dirt', cursive;
-  font-size: 3rem;
 }
 
 .css-demo-icon {
@@ -64,29 +100,13 @@
   transform: scale(1.1);
 }
 
-.css-demo-body {
+.css-body-icon-bar-wrapper {
   display: flex;
-  max-height: 650px;
-  background-color: white;
+  justify-content: center;
+  width: 100%;
 }
 
-.css-demo-body-left-side {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-
-.css-demo-body-right-side {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-
-.css-demo-text-container-one {
-  margin-top: 1.5rem;
-  margin-left: 1rem;
-}
-
+/* GALLERY */
 .css-demo-gallery-container-outer {
   display: flex;
   max-height: 600px;
@@ -108,12 +128,13 @@
   display: none;
 }
 
-.css-demo-img {
+.css-gallery-demo-img {
   width: 100%;
   border-radius: 20px;
   margin-bottom: 20px;
 }
 
+/* SPLASH PAGE */
 .css-demo-splash-page-container {
   display: flex;
   flex-direction: column;
@@ -141,7 +162,7 @@
   width: 100%;
 }
 
-.css-demo-splash-page-text {
+.css-demo-splash-page-header-text {
   font-family: 'Oswald', sans-serif;
   font-weight: 200;
   color: white;
@@ -164,11 +185,9 @@
   font-weight: 200;
   background-color: white;
   width: 380px;
-  /* border-radius: 20px; */
   padding: 7px 8px;
   border: solid 1px transparent;
   outline: none;
-  /* background: url('../../assets/icons/search.svg') no-repeat 13px center; */
 }
 
 .css-demo-splash-page-search-icon {
@@ -176,11 +195,45 @@
   cursor: pointer;
 }
 
+.css-demo-splash-page-footer {
+  display: flex;
+  margin-top: 5%;
+}
+
+.css-demo-splash-page-text-link {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ICON BAR */
+.css-icon-bar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15%;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  width: 100%;
+}
+
+.css-icon-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.css-icon-bar-icon {
+  width: 2rem;
+  cursor: pointer;
+}
+
+/* FOOTER */
 .css-demo-footer {
   display: flex;
-  position: absolute;
   bottom: 0;
-  background-color: rgb(32, 30, 30);
+  background-color: rgba(40, 140, 255, 0.4);
 }
 
 .css-demo-footer-img {

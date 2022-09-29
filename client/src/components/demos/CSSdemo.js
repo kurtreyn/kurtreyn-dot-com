@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
-  arcade,
   boraBora,
   hamburg,
   castle,
@@ -30,9 +29,18 @@ import {
 } from './externalImages';
 import searchIcon from '../../assets/icons/search.svg';
 import closeIcon from '../../assets/icons/close-icon.svg';
+import bellIcon from '../../assets/icons/bell.svg';
+import curlyLoopIcon from '../../assets/icons/curly-loop.svg';
+import bookmarkIcon from '../../assets/icons/bookmark.svg';
 import './CSSdemo.css';
 
 export default function CSSdemo({ setDemoActive, logo }) {
+  const [showSplashPage, setShowSplashPage] = useState(true);
+
+  const handleShowSplashPage = () => {
+    setShowSplashPage(false);
+  };
+
   const handleClose = () => {
     setDemoActive(false);
   };
@@ -40,24 +48,36 @@ export default function CSSdemo({ setDemoActive, logo }) {
   const CssDemoGallery = () => (
     <div className="css-demo-gallery-container-outer">
       <div className="css-demo-gallery-container-inner">
-        <img src={boraBora} alt="bora bora" className="css-demo-img" />
-        <img src={hamburg} alt="hamburg" className="css-demo-img" />
-        <img src={castle} alt="castle" className="css-demo-img" />
-        <img src={waterfall} alt="waterfall" className="css-demo-img" />
-        <img src={london} alt="london" className="css-demo-img" />
-        <img src={mountains} alt="mountains" className="css-demo-img" />
-        <img src={temple} alt="temple" className="css-demo-img" />
-        <img src={rainbow} alt="rainbow" className="css-demo-img" />
+        <img src={boraBora} alt="bora bora" className="css-gallery-demo-img" />
+        <img src={hamburg} alt="hamburg" className="css-gallery-demo-img" />
+        <img src={castle} alt="castle" className="css-gallery-demo-img" />
+        <img src={waterfall} alt="waterfall" className="css-gallery-demo-img" />
+        <img src={london} alt="london" className="css-gallery-demo-img" />
+        <img src={mountains} alt="mountains" className="css-gallery-demo-img" />
+        <img src={temple} alt="temple" className="css-gallery-demo-img" />
+        <img src={rainbow} alt="rainbow" className="css-gallery-demo-img" />
         <img
           src={swimmingInOcean}
           alt="swimming in ocean"
-          className="css-demo-img"
+          className="css-gallery-demo-img"
         />
-        <img src={mosque} alt="mosque" className="css-demo-img" />
-        <img src={trainInScotland} alt="train" className="css-demo-img" />
-        <img src={copenhagen} alt="copenhagen" className="css-demo-img" />
-        <img src={monument} alt="monument" className="css-demo-img" />
-        <img src={fireworksAsia} alt="fireworks" className="css-demo-img" />
+        <img src={mosque} alt="mosque" className="css-gallery-demo-img" />
+        <img
+          src={trainInScotland}
+          alt="train"
+          className="css-gallery-demo-img"
+        />
+        <img
+          src={copenhagen}
+          alt="copenhagen"
+          className="css-gallery-demo-img"
+        />
+        <img src={monument} alt="monument" className="css-gallery-demo-img" />
+        <img
+          src={fireworksAsia}
+          alt="fireworks"
+          className="css-gallery-demo-img"
+        />
       </div>
     </div>
   );
@@ -65,8 +85,9 @@ export default function CSSdemo({ setDemoActive, logo }) {
   const CssDemoSplashPage = () => (
     <div className="css-demo-splash-page-container">
       <div className="css-demo-splash-page-inner">
-        {/* <img src={miamiPanrama} alt="miami" className="css-demo-splash-page-image" /> */}
-        <h2 className="css-demo-splash-page-text">CSS Travel Site Demo</h2>
+        <h2 className="css-demo-splash-page-header-text">
+          CSS Travel Site Demo
+        </h2>
         <form className="css-demo-splash-page-form">
           <input
             type="search"
@@ -79,6 +100,24 @@ export default function CSSdemo({ setDemoActive, logo }) {
             className="css-demo-splash-page-search-icon"
           />
         </form>
+        <div className="css-demo-splash-page-footer">
+          <span
+            className="css-demo-splash-page-text-link"
+            onClick={handleShowSplashPage}
+          >
+            Enter Site
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+
+  const CssIconBar = () => (
+    <div className="css-icon-bar-container">
+      <div className="css-icon-wrapper">
+        <img src={curlyLoopIcon} alt="" className="css-icon-bar-icon" />
+        <img src={bellIcon} alt="" className="css-icon-bar-icon" />
+        <img src={bookmarkIcon} alt="" className="css-icon-bar-icon" />
       </div>
     </div>
   );
@@ -99,26 +138,87 @@ export default function CSSdemo({ setDemoActive, logo }) {
 
   const CssDemoBody = () => {
     return (
-      <body className="css-demo-body">
-        <div className="css-demo-body-left-side">
-          <div className="css-demo-text-container-one">
-            <h2 className="css-demo-section-title">Video Games</h2>
-            <span className="css-demo-body-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-              delectus maxime iure et quae autem hic obcaecati. Veniam molestias
-              quia cumque maiores odio magni porro error iste, vitae
-              voluptatibus facere?
-            </span>
+      <section className="css-demo-body">
+        <div className="css-demo-body-row">
+          <div className="css-demo-body-column image-col">
+            <div className="css-body-image-wrapper">
+              <img src={venice} alt="venice" className="css-demo-body-image" />
+            </div>
           </div>
-          <div className="css-left-body-image-wrapper">
-            <img src={arcade} alt="arcade" className="css-demo-body-image" />
+          <div className="css-demo-body-column text-col">
+            <h2 className="css-demo-body-text-title">
+              Top 10 Places to Visit in Venice Italy.
+            </h2>
+            <span className="css-demo-body-text">
+              Looking for a romantic getaway? Or maybe something of an
+              adventure? We've got a location just for you.
+            </span>
+            <div className="css-body-icon-bar-wrapper">
+              <CssIconBar />
+            </div>
           </div>
         </div>
 
-        <div className="css-demo-body-right-side">
-          {/* <CssDemoGallery /> */}
+        <div className="css-demo-body-row">
+          <div className="css-demo-body-column text-col">
+            <h2 className="css-demo-body-text-title">
+              How About a List of the Best Beach Locations?
+            </h2>
+            <span className="css-demo-body-text">
+              Need a place to just sit back and relax? There's a beach with your
+              name on it.
+            </span>
+            <div className="css-body-icon-bar-wrapper">
+              <CssIconBar />
+            </div>
+          </div>
+          <div className="css-demo-body-column image-col">
+            <div className="css-body-image-wrapper">
+              <img
+                src={beachFootPrints}
+                alt="beach footprints"
+                className="css-demo-body-image"
+              />
+            </div>
+          </div>
         </div>
-      </body>
+
+        <div className="css-demo-body-row">
+          <div className="css-demo-body-column image-col">
+            <div className="css-body-image-wrapper">
+              <img
+                src={acropolis}
+                alt="acropolis"
+                className="css-demo-body-image"
+              />
+            </div>
+          </div>
+          <div className="css-demo-body-column text-col">
+            <h2 className="css-demo-body-text-title">
+              Tour the Ancient Marvels of the World
+            </h2>
+            <span className="css-demo-body-text">
+              From the Acropolis in Athens Greece to the Colosseum in Rome
+              Italy, the Pyramids in Cairo Egypt, the ruins of Gobekli Tepe and
+              more. We're here to get you to your destination.
+            </span>
+            <div className="css-body-icon-bar-wrapper">
+              <CssIconBar />
+            </div>
+          </div>
+        </div>
+
+        <div className="css-demo-body-row">
+          <div className="css-demo-body-column text-col">
+            <h2 className="css-demo-body-text-title">
+              If you have a trip in mind, we've got a destination!
+            </h2>
+          </div>
+          <div className="css-demo-body-column image-col">
+            <CssDemoGallery />
+          </div>
+        </div>
+      </section>
     );
   };
 
@@ -132,10 +232,10 @@ export default function CSSdemo({ setDemoActive, logo }) {
 
   return (
     <div className="css-demo-container">
-      <CssDemoSplashPage />
-      {/* <CssDemoHeader /> */}
+      {showSplashPage && <CssDemoSplashPage />}
+      <CssDemoHeader />
       <CssDemoBody />
-      {/* <CssDemoFooter /> */}
+      <CssDemoFooter />
     </div>
   );
 }
