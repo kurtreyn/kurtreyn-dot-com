@@ -1,19 +1,32 @@
 import React from 'react';
 import {
-  ps4Controllers,
-  joyStickController,
-  mineCraft,
-  xbox,
-  sega,
   arcade,
-  pcGamer,
-  lanParty,
-  gameBoy,
-  ps2ConsoleAndGames,
-  modernWarfare,
-  ps4,
-  mobileGaming,
-  nintendoSwitch,
+  boraBora,
+  hamburg,
+  castle,
+  stoneBridgePanorama,
+  fireworksAsia,
+  waterfall,
+  london,
+  mountains,
+  temple,
+  rainbow,
+  swimmingInOcean,
+  mosque,
+  trainInScotland,
+  beachFootPrints,
+  archesNationalPark,
+  iceland,
+  venice,
+  greekMonastery,
+  monument,
+  operaHouse,
+  copenhagen,
+  lightHouse,
+  acropolis,
+  osaka,
+  newZealand,
+  miamiPanrama,
 } from './externalImages';
 
 import closeIcon from '../../assets/icons/close-icon.svg';
@@ -24,8 +37,42 @@ export default function CSSdemo({ setDemoActive, logo }) {
     setDemoActive(false);
   };
 
-  return (
-    <div className="css-demo-container">
+  const CssDemoGallery = () => (
+    <div className="css-demo-gallery-container-outer">
+      <div className="css-demo-gallery-container-inner">
+        <img src={boraBora} alt="bora bora" className="css-demo-img" />
+        <img src={hamburg} alt="hamburg" className="css-demo-img" />
+        <img src={castle} alt="castle" className="css-demo-img" />
+        <img src={waterfall} alt="waterfall" className="css-demo-img" />
+        <img src={london} alt="london" className="css-demo-img" />
+        <img src={mountains} alt="mountains" className="css-demo-img" />
+        <img src={temple} alt="temple" className="css-demo-img" />
+        <img src={rainbow} alt="rainbow" className="css-demo-img" />
+        <img
+          src={swimmingInOcean}
+          alt="swimming in ocean"
+          className="css-demo-img"
+        />
+        <img src={mosque} alt="mosque" className="css-demo-img" />
+        <img src={trainInScotland} alt="train" className="css-demo-img" />
+        <img src={copenhagen} alt="copenhagen" className="css-demo-img" />
+        <img src={monument} alt="monument" className="css-demo-img" />
+        <img src={fireworksAsia} alt="fireworks" className="css-demo-img" />
+      </div>
+    </div>
+  );
+
+  const CssDemoHero = () => (
+    <div className="css-demo-hero-container">
+      <div className="css-demo-hero-inner">
+        {/* <img src={miamiPanrama} alt="miami" className="css-demo-hero-image" /> */}
+        <h2 className="css-demo-hero-text">CSS Travel Demo</h2>
+      </div>
+    </div>
+  );
+
+  const CssDemoHeader = () => {
+    return (
       <header className="css-demo-header">
         <h1 className="css-header-text">CSS Demo</h1>
         <img
@@ -35,7 +82,11 @@ export default function CSSdemo({ setDemoActive, logo }) {
           onClick={handleClose}
         />
       </header>
+    );
+  };
 
+  const CssDemoBody = () => {
+    return (
       <body className="css-demo-body">
         <div className="css-demo-body-left-side">
           <div className="css-demo-text-container-one">
@@ -53,53 +104,26 @@ export default function CSSdemo({ setDemoActive, logo }) {
         </div>
 
         <div className="css-demo-body-right-side">
-          <div className="css-demo-gallery-container-outer">
-            <div className="css-demo-gallery-container-inner">
-              <img
-                src={ps4Controllers}
-                alt="ps4-controller"
-                className="css-demo-img"
-              />
-              <img
-                src={joyStickController}
-                alt="joystick"
-                className="css-demo-img"
-              />
-              <img src={mineCraft} alt="minecraft" className="css-demo-img" />
-              <img src={xbox} alt="xbox" className="css-demo-img" />
-              <img src={sega} alt="sega" className="css-demo-img" />
-              <img src={arcade} alt="arcade" className="css-demo-img" />
-              <img src={pcGamer} alt="pc gaming" className="css-demo-img" />
-              <img src={lanParty} alt="lan party" className="css-demo-img" />
-              <img src={gameBoy} alt="gameboy" className="css-demo-img" />
-              <img
-                src={ps2ConsoleAndGames}
-                alt="play-station 2"
-                className="css-demo-img"
-              />
-              <img
-                src={modernWarfare}
-                alt="modern warfare"
-                className="css-demo-img"
-              />
-              <img src={ps4} alt="play-station 4" className="css-demo-img" />
-              <img
-                src={mobileGaming}
-                alt="mobile gaming"
-                className="css-demo-img"
-              />
-              <img
-                src={nintendoSwitch}
-                alt="nintendo switch"
-                className="css-demo-img"
-              />
-            </div>
-          </div>
+          {/* <CssDemoGallery /> */}
         </div>
       </body>
+    );
+  };
+
+  const CssDemoFooter = () => {
+    return (
       <footer className="css-demo-footer">
         <img src={logo} alt="logo" className="css-demo-footer-img" />
       </footer>
+    );
+  };
+
+  return (
+    <div className="css-demo-container">
+      <CssDemoHero />
+      {/* <CssDemoHeader /> */}
+      {/* <CssDemoBody /> */}
+      {/* <CssDemoFooter /> */}
     </div>
   );
 }

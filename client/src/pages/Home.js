@@ -39,6 +39,7 @@ export default function Home({ isLoggedIn }) {
   const handleShowProjects = () => {
     setShowProjects(!showProjects);
   };
+
   return (
     <div className="home-container">
       {!showProjects && (
