@@ -233,9 +233,13 @@ export default function CSSdemo({ setDemoActive, logo }) {
   return (
     <div className="css-demo-container">
       {showSplashPage && <CssDemoSplashPage />}
-      <CssDemoHeader />
-      <CssDemoBody />
-      <CssDemoFooter />
+      {!showSplashPage && (
+        <>
+          <CssDemoHeader />
+          <CssDemoBody />
+          <CssDemoFooter />
+        </>
+      )}
     </div>
   );
 }
