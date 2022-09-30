@@ -123,3 +123,6 @@ export const osaka =
 
 export const newZealand =
   'https://cdn.pixabay.com/photo/2019/11/29/14/29/new-zealand-4661427_1280.jpg';
+
+export const vacationPrep =
+  'https://cdn.pixabay.com/photo/2017/10/23/05/56/summer-2880261_1280.jpg';

@@ -25,7 +25,7 @@ import {
   acropolis,
   osaka,
   newZealand,
-  miamiPanrama,
+  vacationPrep,
 } from './externalImages';
 import searchIcon from '../../assets/icons/search.svg';
 import closeIcon from '../../assets/icons/close-icon.svg';
@@ -43,6 +43,10 @@ export default function CSSdemo({ setDemoActive, logo }) {
 
   const handleClose = () => {
     setDemoActive(false);
+  };
+
+  const handleFauxFunction = () => {
+    alert('Sorry, feature not available demo');
   };
 
   const CssDemoGallery = () => (
@@ -78,6 +82,38 @@ export default function CSSdemo({ setDemoActive, logo }) {
           alt="fireworks"
           className="css-gallery-demo-img"
         />
+        <img
+          src={archesNationalPark}
+          alt="arches national park"
+          className="css-gallery-demo-img"
+        />
+        <img
+          src={greekMonastery}
+          alt="greek monastery"
+          className="css-gallery-demo-img"
+        />
+        <img src={iceland} alt="iceland" className="css-gallery-demo-img" />
+        <img
+          src={operaHouse}
+          alt="sydney opera house"
+          className="css-gallery-demo-img"
+        />
+        <img
+          src={lightHouse}
+          alt="light house"
+          className="css-gallery-demo-img"
+        />
+        <img src={osaka} alt="osaka japan" className="css-gallery-demo-img" />
+        <img
+          src={newZealand}
+          alt="new zealand"
+          className="css-gallery-demo-img"
+        />
+        <img
+          src={stoneBridgePanorama}
+          alt="stone bridge"
+          className="css-gallery-demo-img"
+        />
       </div>
     </div>
   );
@@ -98,6 +134,7 @@ export default function CSSdemo({ setDemoActive, logo }) {
             src={searchIcon}
             alt="search"
             className="css-demo-splash-page-search-icon"
+            onClick={handleFauxFunction}
           />
         </form>
         <div className="css-demo-splash-page-footer">
@@ -115,9 +152,24 @@ export default function CSSdemo({ setDemoActive, logo }) {
   const CssIconBar = () => (
     <div className="css-icon-bar-container">
       <div className="css-icon-wrapper">
-        <img src={curlyLoopIcon} alt="" className="css-icon-bar-icon" />
-        <img src={bellIcon} alt="" className="css-icon-bar-icon" />
-        <img src={bookmarkIcon} alt="" className="css-icon-bar-icon" />
+        <img
+          src={curlyLoopIcon}
+          alt=""
+          className="css-icon-bar-icon"
+          onClick={handleFauxFunction}
+        />
+        <img
+          src={bellIcon}
+          alt=""
+          className="css-icon-bar-icon"
+          onClick={handleFauxFunction}
+        />
+        <img
+          src={bookmarkIcon}
+          alt=""
+          className="css-icon-bar-icon"
+          onClick={handleFauxFunction}
+        />
       </div>
     </div>
   );
@@ -213,6 +265,11 @@ export default function CSSdemo({ setDemoActive, logo }) {
             <h2 className="css-demo-body-text-title">
               If you have a trip in mind, we've got a destination!
             </h2>
+            <img
+              src={vacationPrep}
+              alt="vacation prep"
+              className="css-large-image-body"
+            />
           </div>
           <div className="css-demo-body-column image-col">
             <CssDemoGallery />
