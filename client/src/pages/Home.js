@@ -55,8 +55,7 @@ export default function Home({ isLoggedIn }) {
                 <a
                   href="https://www.linkedin.com/in/kurt-reynolds-447ab632/"
                   target={'_blank'}
-                  rel="noreferrer"
-                >
+                  rel="noreferrer">
                   <img
                     src={linkedinIcon}
                     alt="linkedin icon"
@@ -66,8 +65,7 @@ export default function Home({ isLoggedIn }) {
                 <a
                   href="https://github.com/kurtreyn?tab=repositories"
                   target={'_blank'}
-                  rel="noreferrer"
-                >
+                  rel="noreferrer">
                   <img
                     src={githubIcon}
                     alt="github icon"
@@ -86,10 +84,9 @@ export default function Home({ isLoggedIn }) {
               <div className="left-bottom">
                 <span className="left-bottom-text text-color">
                   My name is Kurt Reynolds, and I am a full stack software
-                  engineer with a focus on front-end and mobile.
+                  engineer.
                   <br />I have a passion for creating and learning and have used
-                  that to develop numerous projects, including mobile apps,
-                  e-commerce, back-end servers, and more.
+                  that to develop numerous professional and personal projects.
                 </span>
               </div>
             </div>
@@ -100,8 +97,7 @@ export default function Home({ isLoggedIn }) {
               <div className="right-bottom">
                 <div
                   className="home-projects-icon-wrapper"
-                  onClick={handleShowProjects}
-                >
+                  onClick={handleShowProjects}>
                   <img
                     src={projectsIcon}
                     alt="projects icon"
@@ -118,8 +114,7 @@ export default function Home({ isLoggedIn }) {
           <div className="sidebar-section">
             <div
               className="sidebar-block"
-              onClick={() => setShoSideBar(!showSideBar)}
-            >
+              onClick={() => setShoSideBar(!showSideBar)}>
               <img
                 src={!showSideBar ? chevronDown : chevronUp}
                 alt="down arrow"
